@@ -1,0 +1,106 @@
+.movieInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 30px;
+}
+
+.infos {
+  padding: 20px 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.goBackBtn {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+}
+
+.goBackBtn:hover {
+  color: rgb(255, 61, 94);
+}
+
+.poster {
+  height: 400px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mainInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.infoType {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.descr,
+.gener {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.genersList {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.moreInfoNav {
+  border-bottom: 2px solid #ccc;
+  padding: 25px 60px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.navTitle {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.navBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.navBtn {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.navBtn:hover {
+  color: rgb(255, 61, 94);
+}

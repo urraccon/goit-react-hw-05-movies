@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  /* height: 100vh; */
+  /* width: 100%; */
+  /* align-items: center; */
+  justify-content: center;
+  padding: 150px;
+}
+
+.messageBox {
+  /* position: absolute; */
+  /* height: 100vh;
+  width: 100vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 50%;
+  left: 50%; */
+  /* background-color: black; */
+  border-radius: 8px;
+  /* border: 1px solid black; */
+  padding: 15px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.message {
+  font-size: 20px;
+  color: rgb(255, 61, 94);
+  font-weight: 500;
+}

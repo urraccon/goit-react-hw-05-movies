@@ -1,0 +1,26 @@
+.reviews {
+  padding: 50px 60px;
+}
+
+.reviewList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.author {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.content,
+.noReview {
+  font-size: 14px;
+}
