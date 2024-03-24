@@ -1,7 +1,7 @@
 import Error from 'components/pages/common/components/error/Error';
 import Loader from 'components/pages/common/components/loader/Loader';
 import MoviesService from 'components/pages/common/services/MoviesService';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import styles from './MovieDetails.module.css';
 import { FaArrowLeftLong } from 'react-icons/fa6';
@@ -17,6 +17,7 @@ const MovieDetails = () => {
   const pagePath = useLocation();
 
   useEffect(() => {
+    debugger;
     let prevPage = pagePath.state?.from.pathname;
     let id = pagePath.pathname.split('/movies/').join('');
 
@@ -24,10 +25,12 @@ const MovieDetails = () => {
       setMovieId(id);
       setPrevPath(prevPage);
     } else {
-      id = id.split('/')[0];
-      prevPage = pagePath.pathname.split(`/${id}`)[0];
-      setMovieId(id);
-      setPrevPath(prevPage);
+      if (!pagePath.state) {
+        id = id.split('/')[0];
+        prevPage = pagePath.pathname.split(`/${id}`)[0];
+        setMovieId(id);
+        setPrevPath(prevPage);
+      }
     }
   }, [pagePath]);
 
@@ -129,7 +132,9 @@ const MovieDetails = () => {
         </div>
       </section>
       <section className={styles.moreInfo}>
-        <Outlet />
+        <Suspense fallback={<Loader />}>
+          <Outlet />
+        </Suspense>
       </section>
     </div>
   );

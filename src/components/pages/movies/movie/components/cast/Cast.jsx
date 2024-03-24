@@ -27,7 +27,7 @@ const Cast = () => {
       const response = await MoviesService.getActors(movieId);
       const result = response.data.cast;
       setActorList(result);
-      console.log(result);
+      // console.log(result);
 
       return result;
     }
