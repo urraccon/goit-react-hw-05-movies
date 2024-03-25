@@ -17,7 +17,6 @@ const MovieDetails = () => {
   const pagePath = useLocation();
 
   useEffect(() => {
-    debugger;
     let prevPage = pagePath.state?.from.pathname;
     let id = pagePath.pathname.split('/movies/').join('');
 
@@ -25,10 +24,10 @@ const MovieDetails = () => {
       setMovieId(id);
       setPrevPath(prevPage);
     } else {
+      id = id.split('/')[0];
+      setMovieId(id);
       if (!pagePath.state) {
-        id = id.split('/')[0];
         prevPage = pagePath.pathname.split(`/${id}`)[0];
-        setMovieId(id);
         setPrevPath(prevPage);
       }
     }

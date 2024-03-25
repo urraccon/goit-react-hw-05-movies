@@ -12,6 +12,8 @@ const Cast = () => {
   const [error, setError] = useState('');
 
   const pathPage = useLocation();
+  // debugger;
+  // console.log(pathPage);
 
   useEffect(() => {
     const id = pathPage.pathname
@@ -27,7 +29,6 @@ const Cast = () => {
       const response = await MoviesService.getActors(movieId);
       const result = response.data.cast;
       setActorList(result);
-      // console.log(result);
 
       return result;
     }
